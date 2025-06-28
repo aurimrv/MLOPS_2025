@@ -11,15 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out código
-      uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Configurar Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
 
       - name: Instalar dependências
-      run: pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Rodar testes  automatizados
-      run: pytest test_pipeline.py
+        run: pytest test_pipeline.py
