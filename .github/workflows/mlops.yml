@@ -2,9 +2,9 @@ name: CI Pipeline MLOps
 
 on:
   push:
-    branches:["main"]
+    branches: [ "main" ]
   pull_requests:
-    branches:["main"]
+    branches: [ "main" ]
 
 jobs:
   build-and-test:
