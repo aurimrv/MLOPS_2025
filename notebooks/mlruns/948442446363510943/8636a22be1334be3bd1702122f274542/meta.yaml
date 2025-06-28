@@ -1,0 +1,14 @@
+artifact_uri: file:///home/auri/insync/Documentos/disciplinas/2025/workspace/mlops_pipeline_aula/notebooks/mlruns/948442446363510943/8636a22be1334be3bd1702122f274542/artifacts
+end_time: 1751130742104
+entry_point_name: ''
+experiment_id: '948442446363510943'
+lifecycle_stage: active
+run_id: 8636a22be1334be3bd1702122f274542
+run_name: receptive-owl-181
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751130740410
+status: 3
+tags: []
+user_id: auri

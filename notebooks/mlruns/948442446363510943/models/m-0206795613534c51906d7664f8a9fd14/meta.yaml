@@ -1,0 +1,10 @@
+artifact_location: file:///home/auri/insync/Documentos/disciplinas/2025/workspace/mlops_pipeline_aula/notebooks/mlruns/948442446363510943/models/m-0206795613534c51906d7664f8a9fd14/artifacts
+creation_timestamp: 1751130740420
+experiment_id: '948442446363510943'
+last_updated_timestamp: 1751130742102
+model_id: m-0206795613534c51906d7664f8a9fd14
+model_type: null
+name: modelo_sentimento
+source_run_id: 8636a22be1334be3bd1702122f274542
+status: 2
+status_message: null
