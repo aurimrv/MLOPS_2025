@@ -6,5 +6,7 @@ streamlit
 jobslib
 matplot
 seaborn
+jupyter
+nbconvert
 pytest
 pytest-cov
