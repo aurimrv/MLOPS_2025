@@ -48,7 +48,7 @@ jobs:
         run: |
           pytest --cov=./ \
                 --cov-report=xml \
-                --cov-fail-under=60 \
+                --cov-fail-under=80 \
                 test_pipeline.py
 
       - name: Upload to Codecov
