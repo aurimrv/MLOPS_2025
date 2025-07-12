@@ -20,7 +20,7 @@ def test_vectorizer_output_negativo():
    vectorizer = joblib.load("./vectorizer.joblib")
    sample = ["Este é um produto ruim"]
    vetor = vectorizer.transform(sample)
-   assert vetor.shape[0] == 0, "Vetor retornou de forma incorreta"
+   assert vetor.shape[0] == 1, "Vetor retornou de forma incorreta"
    
 def test_model_prediction_labels():
    model = joblib.load("./model.joblib")
