@@ -7,3 +7,4 @@ jobslib
 matplot
 seaborn
 pytest
+pytest-cov
