@@ -38,7 +38,10 @@ jobs:
                 --cov-fail-under=60 \
                 test_pipeline.py
 
-      # (Optional) withUpload coverage to Codecov
-      - name: Upload coverage to Codecov  
+      - name: Upload to Codecov
         if: success()  # Only run if previous steps succeed
         uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}  # Uses the secret
+          file: ./coverage.xml  # Explicit path to coverage file
+          flags: github-actions  # Optional: tag this upload
