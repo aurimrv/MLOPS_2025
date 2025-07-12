@@ -45,3 +45,4 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}  # Uses the secret
           file: ./coverage.xml  # Explicit path to coverage file
           flags: github-actions  # Optional: tag this upload
+          override_branch: main  # Or your default branch name
