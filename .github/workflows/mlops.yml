@@ -1,5 +1,6 @@
-name: CI Pipeline MLOps
+name: CI Pipeline MLOps  # Workflow name (visible in GitHub UI)
 
+# Trigger on push or PR to 'main' branch
 on:
   push:
     branches: [ "main" ]
@@ -8,18 +9,36 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Use GitHub's latest Ubuntu runner
+
     steps:
-      - name: Check out código
+      # Checkout the repository (required to access source code)
+      - name: Check out code  
         uses: actions/checkout@v3
 
-      - name: Configurar Python
+      # Install Python 3.11
+      - name: Set up Python  
         uses: actions/setup-python@v4
         with:
-          python-version: 3.11
+          python-version: "3.11"  # Exact Python version to use
 
-      - name: Instalar dependências
+      # Install dependencies from requirements.txt
+      - name: Install dependencies  
         run: pip install -r requirements.txt
 
+      # Run pytest normally
       - name: Rodar testes  automatizados
         run: pytest test_pipeline.py
+        
+      # Run pytest with coverage (fail if coverage < 80%)
+      - name: Run tests with coverage  
+        run: |
+          pytest --cov=./ \
+                --cov-report=xml \
+                --cov-fail-under=80 \
+                test_pipeline.py
+
+      # (Optional) withUpload coverage to Codecov
+      - name: Upload coverage to Codecov  
+        if: success()  # Only run if previous steps succeed
+        uses: codecov/codecov-action@v3
