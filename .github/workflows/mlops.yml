@@ -2,6 +2,7 @@ name: CI Pipeline MLOps  # Workflow name (visible in GitHub UI)
 
 # Trigger on push or PR to 'main' branch
 on:
+  workflow_dispatch:
   push:
     branches: [ "main" ]
   pull_request:
