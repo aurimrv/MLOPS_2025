@@ -1,4 +1,4 @@
-# Projeto de classificação desentimentos com MLOps
+# Projeto de classificação de sentimentos com MLOps
 
 ## Etapas do projeto
 
